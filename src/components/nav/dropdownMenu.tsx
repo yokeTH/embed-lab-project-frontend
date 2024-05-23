@@ -23,7 +23,7 @@ export default function DropDownMenu() {
                 signOut();
               }}
             >
-              SignOut
+              Sign Out
             </a>
           ) : (
             <a
@@ -31,7 +31,7 @@ export default function DropDownMenu() {
                 signIn();
               }}
             >
-              SignIn
+              Sign In
             </a>
           )}
         </li>

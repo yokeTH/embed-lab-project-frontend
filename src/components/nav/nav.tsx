@@ -28,7 +28,7 @@ export default function Nav() {
               signOut();
             }}
           >
-            SignOut
+            Sign Out
           </div>
         ) : (
           <div
@@ -37,7 +37,7 @@ export default function Nav() {
               signIn();
             }}
           >
-            SignIn
+            Sign In
           </div>
         )}
         <DropDownMenu />

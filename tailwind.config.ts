@@ -40,8 +40,8 @@ const config: Config = {
           "neutral-content": "#e9e7e7",
 
           "base-100": "#e8dac5",
-          "base-200": "#d1cccc",
-          "base-300": "#b9b1b1",
+          "base-200": "#d9c8b0",
+          "base-300": "#c5b196",
           "base-content": "#100f0f",
 
           info: "#0e5b9a",

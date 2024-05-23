@@ -12,9 +12,18 @@ export interface DustItem {
 }
 
 export default async function getDust(r: number = 5) {
-  const res = await fetch(
+  console.log("r", r);
+  console.log(
+    "url",
     `https://pet-sosiety-backend.sern-dev.workers.dev/dust?r=${r}`
+  );
+  const res = await fetch(
+    `https://pet-sosiety-backend.sern-dev.workers.dev/dust?r=${r}`,
+    {
+      cache: "no-cache",
+    }
   ).then((r) => r.json());
 
+  // console.log(res.data);
   return res.data as Dusts;
 }

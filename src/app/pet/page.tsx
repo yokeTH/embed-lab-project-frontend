@@ -34,22 +34,27 @@ const Pet = () => {
       <Nav />
       <div className="wrapper relative z-0">
         {deviceId && filtered && (
-          <div className="detail-wrapper">
-            <div className="max-sm:mt-16 p-4 bg-base-300 rounded m-2">
-              <span className="text-lg font-semibold">name: </span>{" "}
-              {filtered.name}
+          <div className="detail-wrapper bg-base-200 text-center flex flex-col items-center justify-center">
+            <div className="">
+              <div className=" bg-white rounded-full p-4 mb-8 w-[192px] h-[192px] flex justify-center items-center">
+                <span className="text-[160px]">🐶</span>
+              </div>
             </div>
-            <div className="p-4 bg-base-200  rounded m-2">
-              <span className="text-lg font-semibold">latitude: </span>{" "}
-              {filtered.record[0].latitude}
+            <div className=" rounded m-2">
+              <span className="text-neutral text-lg">NAME</span> <br />
+              <span className=" font-semibold text-3xl"> {filtered.name}</span>
             </div>
-            <div className="p-4 bg-base-200 rounded m-2">
-              <span className="text-lg font-semibold">longitude: </span>{" "}
-              {filtered.record[0].longitude}
+            <div className="rounded m-2">
+              <span className="text-neutral text-lg">LOCATION</span> <br />
+              <span className=" font-semibold text-3xl">
+                ({filtered.record[0].latitude}, {filtered.record[0].longitude})
+              </span>
             </div>
-            <div className="p-4 bg-base-200 rounded m-2">
-              <span className="text-lg font-semibold">update: </span>{" "}
-              {new Date(filtered.record[0].updateAt).toLocaleString()}
+            <div className="rounded">
+              <span className="text-neutral text-lg">LAST UPDATE</span> <br />
+              <span className="font-semibold text-3xl">
+                {new Date(filtered.record[0].updateAt).toLocaleString()}
+              </span>
             </div>
             {/* {JSON.stringify(filtered)} */}
           </div>

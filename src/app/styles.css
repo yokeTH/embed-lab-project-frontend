@@ -4,13 +4,13 @@
 
 @layer components {
   .map-wrapper {
-    @apply sm:rounded-xl border overflow-hidden w-full;
+    @apply sm:rounded-xl shadow-xl overflow-hidden w-full;
   }
 }
 
 @layer components {
   .detail-wrapper {
-    @apply sm:rounded-xl border overflow-hidden w-full;
+    @apply sm:rounded-xl shadow-xl overflow-hidden w-full;
   }
 }
 

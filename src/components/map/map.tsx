@@ -62,7 +62,7 @@ const Map = ({ points }: Props) => {
       points.forEach((point) => {
         const marker = L.marker([point.latitude, point.longitude], {
           icon: new L.DivIcon({
-            html: `<span class="text-[8px] badge badge-outline right-0 top-0">µg/M<sup>3</sup> </span> <span class="pin ${getColorByValue(
+            html: `<span class="text-[8px] badge badge-outline right-0 top-0">µg/m<sup>3</sup> </span> <span class="pin ${getColorByValue(
               point.dustValue
             )}">${Math.floor(point.dustValue)} </span>`,
             iconSize: L.point(100, 100),

@@ -11,6 +11,7 @@ export default async function getPet() {
     "https://pet-sosiety-backend.sern-dev.workers.dev/pet",
     {
       headers: { Authorization: `${authType} ${authToken}` },
+      cache: "no-cache",
     }
   ).then((r) => r.json());
 
