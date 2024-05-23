@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "leaflet/dist/leaflet.css";
+
+.leaflet-cluster-anim .leaflet-marker-icon,
+.leaflet-cluster-anim .leaflet-marker-shadow {
+  -webkit-transition: -webkit-transform 0.5s ease-out, opacity 0.5s ease-in;
+  -moz-transition: -moz-transform 0.5s ease-out, opacity 0.5s ease-in;
+  -o-transition: -o-transform 0.5s ease-out, opacity 0.5s ease-in;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-in;
+}
+
+.leaflet-cluster-spider-leg {
+  -webkit-transition: -webkit-stroke-dashoffset 0.5s ease-out,
+    -webkit-stroke-opacity 0.5s ease-in;
+  -moz-transition: -moz-stroke-dashoffset 0.5s ease-out,
+    -moz-stroke-opacity 0.5s ease-in;
+  -o-transition: -o-stroke-dashoffset 0.5s ease-out,
+    -o-stroke-opacity 0.5s ease-in;
+  transition: stroke-dashoffset 0.5s ease-out, stroke-opacity 0.5s ease-in;
+}
+
+.pin {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.green {
+  background-color: #b0c5a4;
+}
+
+.yellow {
+  background-color: #f1ef99;
+}
+
+.orange {
+  background-color: #ebc49f;
+}
+
+.red {
+  background-color: #d37676;
+}
+
+@layer components {
+  .custom-zoom-control {
+    @apply flex flex-col gap-2 m-1;
+  }
+}
+
+@layer components {
+  .custom-zoom-control button {
+    @apply btn border-2 text-2xl;
+  }
+}
+
+@layer components {
+  .custom-zoom-control button span {
+    @apply -translate-y-0.5;
+  }
+}

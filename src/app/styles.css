@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .map-wrapper {
+    @apply sm:rounded-xl border overflow-hidden w-full;
+  }
+}
+
+@layer components {
+  .detail-wrapper {
+    @apply sm:rounded-xl border overflow-hidden w-full;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply h-screen sm:h-[calc(100vh-100px)] sm:m-4 flex flex-row justify-center gap-2;
+  }
+}

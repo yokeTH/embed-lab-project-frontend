@@ -1,10 +1,10 @@
-import "./styles.css";
+import "@/app/styles.css";
 import MapComponent from "@/components/map/mapComponent";
 import Nav from "@/components/nav/nav";
 import getDust, { Dusts } from "@/services/getDust";
 
-export default async function Home() {
-  const r = await getDust();
+export default async function Page({ params }: { params: { r: string } }) {
+  const r = await getDust(Number(params.r) || 5);
   const g = r.reduce((p, c) => {
     (p[c["petId"]] = p[c["petId"]] || []).push(c);
     return p;
