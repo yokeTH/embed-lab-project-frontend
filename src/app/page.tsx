@@ -37,7 +37,7 @@ export default async function Home() {
     <>
       <Nav />
       <div className="wrapper relative z-0">
-        <div className="map-wrapper">{r && <MapComponent points={avg} />}</div>
+        <div className="map-wrapper">{r && <MapComponent points={r} />}</div>
       </div>
     </>
   );

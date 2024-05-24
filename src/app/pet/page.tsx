@@ -60,7 +60,9 @@ const Pet = () => {
           </div>
         )}
         <div className={`map-wrapper ${deviceId && "max-md:hidden"}`}>
-          {data && <MapComponent pets={data} />}
+          {data && (
+            <MapComponent pets={data.filter((e: any) => e.record.length > 0)} />
+          )}
         </div>
       </div>
     </>
